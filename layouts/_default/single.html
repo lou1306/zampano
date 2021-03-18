@@ -1,12 +1,5 @@
 {{ define "main" }}
 
-{{ $projectLogo := "logo.png" | printf "%s%s" .Dir }}
-
-{{ if fileExists $projectLogo -}}
-<div class="header">
-  <img src="logo.png" class="logo">
-</div>
-{{- end}}
 
 <div class="header wrapper">
   <span class="page_title">
