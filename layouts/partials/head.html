@@ -1,34 +1,30 @@
 <div class="header">
-	<img src={{ "profile.jpg" | absURL }} class="profile_image">
+	<img src={{ "img/profile.jpg" | absURL }} class="profile_image" alt="A photo portrait of Luca Di Stefano">
 	<h1 class="site-title">{{ .Site.Title }}</h1>
 	<div class="site-affilation">
-		<span class="affilation">
+		<div class="affilation">
 			{{- range $index, $key := .Site.Params.affilation -}}
 			<ul class="flat">
 				<li class="position">{{$key.position}}, {{$key.name}}</li>
 				<li class="email">{{ $key.contact}}</li>
 			</ul>
 			{{- end -}}
-		</span>
-		<!--
-      {{- if isset .Site.Params "subtitle" -}}
-      <h2>{{ .Site.Params.Subtitle | markdownify }}</h2>
-      {{- end -}}
-    -->
+		</div>
 
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := .Site.Params.Social -}}
                                 <li><a href="{{ $key.url }}" title="{{ $key.name }}" class="blog_cv">[{{ $key.icon }}]</a></li>  
 				{{- end -}}
+                        </ul>
 				{{ if or (.Site.Params.blog) (.Site.Params.cv_name) }}
-				|
+			<ul class="flat">
 				{{- with .Site.Params.blog -}}
-				<a href="{{ . }}" class="blog_cv">[blog]</a>
+                                <li><a href="{{ . }}" class="blog_cv">[blog]</a></li>
 				{{- end -}}
 
 				{{ with .Site.Params.cv_name }}
-				<a href="{{ . }}" class="blog_cv">[cv]</a>
+                                <li><a href="{{ . }}" class="blog_cv">[cv]</a></li>
 				{{ end }}
 				{{ end }}
 			</ul>
