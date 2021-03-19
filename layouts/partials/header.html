@@ -1,10 +1,11 @@
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {{ with .Site.Params.charset -}}
+        <meta charset="{{ . }}" />
+        {{- end }}
 	{{- $title := ( .Title ) -}}
 	{{- $siteTitle := ( .Site.Title ) -}}
 	{{- if .IsHome -}}
-	<title>{{ $siteTitle }} {{- if isset .Site.Params "subtitle" -}} - {{ .Site.Params.Subtitle }}{{- end -}} </title>
+	<title>{{ $siteTitle }} {{- if isset .Site.Params "subtitle"}} - {{ .Site.Params.Subtitle }}{{- end -}} </title>
 	{{- else -}}
 	<title>{{ $title }} - {{ $siteTitle }}</title>
 	{{- end -}}
@@ -14,11 +15,8 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
-	{{- template "_internal/opengraph.html" . -}}
-	{{- template "_internal/twitter_cards.html" . -}}
-
-	<link rel="stylesheet" type="text/css" media="screen" href={{ "css/normalize.css" | absURL }} />
-	<link rel="stylesheet" type="text/css" media="screen" href={{ "css/main.css" | absURL }}/>
+        <!--<link rel="stylesheet" type="text/css" media="screen" href={{ "css/normalize.css" | absURL }} />-->
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "main.css" | absURL }}"/>
 
 	{{ range .Site.Params.custom_css -}}
 	<link rel="stylesheet" href="{{ . | absURL }}">

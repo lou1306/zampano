@@ -1,13 +1,10 @@
-/* Ubuntu, Ubuntu */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
-
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   color: #333;
   line-height: 1.5;
   font-size: 16px;
+  background-color: #fafafa
 }
 
 a,
@@ -250,7 +247,7 @@ ul {
   /* color: #a00; */
   font-size: 14px;
   display: block;
-  font-family: "Ubuntu Mono";
+  font-family: "Ubuntu Mono", monospace;
   font-weight: bolder;
 }
 
@@ -293,7 +290,7 @@ ul {
 
 .page_meta {
   display: block;
-  font-family: "Ubuntu Mono";
+  font-family: "Ubuntu Mono", monospace;
   font-size: 14px;
 }
 
@@ -304,7 +301,7 @@ ul {
 .email {
   /* color: #a00; */
   font-size: 16px;
-  font-family: "Ubuntu Mono";
+  font-family: "Ubuntu Mono", monospace;
   font-weight: bolder;
 }
 
@@ -328,13 +325,13 @@ ul {
 }
 
 .code_blog {
-    font-family: "Ubuntu Mono";
+    font-family: "Ubuntu Mono", monospace;
     font-size: 14px;
     margin: 0em .9em 0em;
 }
 
 .blog_cv {
-    font-family: "Ubuntu Mono";
+    font-family: "Ubuntu Mono", monospace;
     font-size: 17px;
     /* margin: 0em .9em 0em; */
 }
