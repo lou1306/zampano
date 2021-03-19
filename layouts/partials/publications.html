@@ -14,31 +14,20 @@
 			<p class="publications"> {{ $publication.name }}, </p>
 			{{ end }}
 			{{ $publication.dest | markdownify }}.
-
                         {{ if or ($publication.code_link) $publication.blog_link $publication.pdf_link $publication.video_link $publication.slides_link }}
-			<span class="code_blog">
-				{{ with $publication.pdf_link }}
+			<span class="code_blog"> {{ with $publication.pdf_link }}
 				[<a href="{{ $publication.pdf_link }}">pdf</a>]
-				{{ end }}
-
-				{{ with $publication.code_link }}
+				{{ end }} {{ with $publication.code_link }}
 				[<a href="{{ $publication.code_link }}">code</a>]
-				{{ end }}
-
-				{{ with $publication.blog_link }}
+				{{ end }} {{ with $publication.blog_link }}
 				[<a href="{{ $publication.blog_link }}">blog</a>]
-				{{ end }}
-
-				{{ with $publication.slides_link }}
+				{{ end }} {{ with $publication.slides_link }}
 				[<a href="{{ $publication.slides_link }}">slides</a>]
-				{{ end }}
-
-				{{ with $publication.video_link }}
+				{{ end }} {{ with $publication.video_link }}
 				[<a href="{{ $publication.video_link }}">video</a>]
 				{{ end }}
 			</span>
 			{{ end }}
-
 			<span class="collaborators">
 				{{ $publication.authors | markdownify }}
 			</span>
