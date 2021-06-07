@@ -255,7 +255,7 @@ ul {
   /* color: #a00; */
   /* font-size: 14px; */
   /* display: block; */
-  font-family: Ubuntu;
+  font-family: Ubuntu, raleway, sans-serif;
   /* font-weight: bolder; */
 }
 
@@ -281,7 +281,7 @@ ul {
 }
 
 .page_title {
-  font-family: Ubuntu;
+  font-family: Ubuntu, raleway, sans-serif;
   font-weight: bolder;
   font-size: 1.5em;
   margin-top: 10%;
