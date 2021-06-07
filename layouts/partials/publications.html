@@ -8,10 +8,11 @@
 	<ul>
 		{{ range $elem_index, $publication := $publications.paper }}
 		<li>
+                        {{ $publication.authors | markdownify }}.
 			{{ if $publication.link }}
-			<a href="{{ $publication.link }}" class="publications"> {{ $publication.name }}, </a>
+			<a href="{{ $publication.link }}" > {{ $publication.name }}</a>,
 			{{ else }}
-			<p class="publications"> {{ $publication.name }}, </p>
+			{{ $publication.name }}, 
 			{{ end }}
 			{{ $publication.dest | markdownify }}.
                         {{ if or ($publication.code_link) $publication.blog_link $publication.pdf_link $publication.video_link $publication.slides_link }}
@@ -28,9 +29,6 @@
 				{{ end }}
 			</span>
 			{{ end }}
-			<span class="collaborators">
-				{{ $publication.authors | markdownify }}
-			</span>
 		</li>
 		{{ end }}
 	</ul>
