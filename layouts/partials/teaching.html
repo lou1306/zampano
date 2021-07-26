@@ -1,0 +1,11 @@
+<div class="introduction">
+	{{ with .Site.Params.teaching }}
+	<h4>Teaching</h4>
+        <ul>
+	{{- range $index, $key := .paragraph -}}
+        <li><strong>{{ $key.from }} &ndash; {{ $key.to }}</strong>: {{ $key.text  | markdownify }}
+        </li>
+	{{- end -}}
+        </ul>
+	{{- end -}}
+</div>
