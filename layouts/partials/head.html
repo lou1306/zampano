@@ -23,6 +23,10 @@
                                 <li><a href="{{ . }}" class="blog_cv">[blog]</a></li>
 				{{- end -}}
 
+				{{- with .Site.Params.dblp -}}
+                                <li><a href="{{ . }}" class="blog_cv">[dblp]</a></li>
+				{{- end -}}
+
 				{{ with .Site.Params.cv_name }}
                                 <li><a href="{{ . }}" class="blog_cv">[cv]</a></li>
 				{{ end }}
