@@ -1,5 +1,5 @@
 <div class="header">
-	<img src={{ .Site.Params.picture_name | absURL }} class="profile_image" alt="A photo portrait of Luca Di Stefano">
+  <img src={{ .Site.Params.picture_name | absURL }} class="profile_image" alt="A photo portrait of {{ .Site.Title }}">
 	<h1 class="site-title">{{ .Site.Title }}</h1>
 	<div class="site-affilation">
 		<div class="affilation">
@@ -14,13 +14,13 @@
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := .Site.Params.Social -}}
-                                <li><a href="{{ $key.url }}" title="{{ $key.name }}" class="blog_cv">[{{ $key.icon }}]</a></li>  
+                                <li><a rel="me" href="{{ $key.url }}" title="{{ $key.name }}" class="blog_cv">[{{ $key.icon }}]</a></li>  
 				{{- end -}}
                         </ul>
-				{{ if or (.Site.Params.blog) (.Site.Params.cv_name) }}
+				{{ if or (.Site.Params.blog) (.Site.Params.cv_name) (.Site.Params.dblp) }}
 			<ul class="flat">
 				{{- with .Site.Params.blog -}}
-                                <li><a href="{{ . }}" class="blog_cv">[blog]</a></li>
+                                <li><a rel="me" href="{{ . }}" class="blog_cv">[blog]</a></li>
 				{{- end -}}
 
 				{{- with .Site.Params.dblp -}}
