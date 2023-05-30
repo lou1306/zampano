@@ -1,4 +1,4 @@
-# Avicenna Theme
+# Zampanò Theme
 A minimal Hugo theme for academic homepages.
 
 > This theme was forked from `avicenna` around 2021; `avicenna`, in turn, hugely benefits from `Ezhil Theme`.
