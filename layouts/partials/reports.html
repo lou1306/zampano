@@ -17,15 +17,15 @@
 			{{ $report.dest | markdownify }}.
                         {{ if or ($report.code_link) $report.blog_link $report.pdf_link $report.video_link $report.slides_link }}
 			<span class="code_blog"> {{ with $report.pdf_link }}
-				[<a href="{{ $report.pdf_link }}">pdf</a>]
+				<a href="{{ $report.pdf_link }}">[pdf]</a>
 				{{ end }} {{ with $report.code_link }}
-				[<a href="{{ $report.code_link }}">code</a>]
+				<a href="{{ $report.code_link }}">[code]</a>
 				{{ end }} {{ with $report.blog_link }}
-				[<a href="{{ $report.blog_link }}">blog</a>]
+				<a href="{{ $report.blog_link }}">[blog]</a>
 				{{ end }} {{ with $report.slides_link }}
-				[<a href="{{ $report.slides_link }}">slides</a>]
+				<a href="{{ $report.slides_link }}">[slides]</a>
 				{{ end }} {{ with $report.video_link }}
-				[<a href="{{ $report.video_link }}">video</a>]
+				<a href="{{ $report.video_link }}">[video]</a>
 				{{ end }}
 			</span>
 			{{ end }}

@@ -1,6 +1,10 @@
 <div class="introduction">
 	{{ with .Site.Params.cv }}
-	<h4>Curriculum Vitae</h4>
+	<h4>Curriculum Vitae
+          {{ with $.Site.Params.cv_name }}
+          <a href="{{ . }}" class="blog_cv">[pdf]</a>
+          {{ end }}
+        </h4>
         <ul>
 	{{- range $index, $key := .paragraph -}}
         <li><strong>{{ $key.from }} &ndash; {{ $key.to }}</strong>: {{ $key.text  | markdownify }}

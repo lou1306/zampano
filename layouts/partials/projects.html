@@ -19,11 +19,11 @@
 			{{ if or ($project.code_link) ($project.blog_link) }}
 			<span class="code_blog">
 				{{ with $project.code_link }}
-				[<a href="{{ . }}">code</a>]
+				<a href="{{ . }}">[code]</a>
 				{{ end }}
 
 				{{ with $project.blog_link }}
-				[<a href="{{ . }}">blog</a>]
+				<a href="{{ . }}">[blog]</a>
 				{{ end }}
 			</span>
 			{{ end }}
