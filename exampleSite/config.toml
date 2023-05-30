@@ -1,42 +1,37 @@
 baseURL = "https://example.edu"
 languageCode = "en-us"
 title = "Hadi Sinaee"
-theme = "avicenna"
+theme = "zampano"
 googleAnalytics = "UA-1234-6"
+picture_name = "profile.jpg"
+gravatar = "name@example.com"
 timeout=3000
 
 [params]
   subtitle= "PhD Student"
-  interests="Deep Reinforcement Learning, Machine Learning "
-  cv_name= "HadiSinaee_CV.pdf"
-  blog="http://myblog.edu"
+  interests="Ergodic Literature and Interactive Fiction"
+  cv_name= "cv.pdf"
+  blog="http://example.edu"
 
 [[params.affilation]]
-  name = "Stanford University"
+  name = "Miskatonic University"
   position = "PhD Student"
-  contact = "hadi@cs.stanford.edu"
+  contact = "mail@example.edu"
 
 [[params.affilation]]
   name = "MyCoolStartup"
   position = "Co-Founder"
-  contact = "hadi@mycoolstartup.ai"
+  contact = "mail@example.com"
 
 [[params.social]]
   name = "GitHub"
   icon = "github"
-  url = "https://github.com/hadisinaee"
+  url = "https://github.com/github"
 
 [[params.social]]
   name = "Twitter"
   icon = "twitter"
-  url = "https://twitter.com/hadisinaee"
-
-
-[[params.social]]
-  name = "LinkedIn"
-  icon = "linkedin"
-  url = "https://linkedin.com/in/hadisinaee/"
-
+  url = "https://twitter.com/twitter"
 
 [[params.introduction.paragraph]]
   text="""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -129,3 +124,4 @@ timeout=3000
 		link = ""
 		code_link = ""
 		blog_link = ""
+

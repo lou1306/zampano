@@ -1,87 +1,71 @@
 # Avicenna Theme
-A minimal academic page for academics built with Hugo.
+A minimal Hugo theme for academic homepages.
 
-> This theme hugely benefits from `Ezhil Theme`. I just made some changes to create `avicenna`.
-> __NOTE: I will review all the pull requests in the second half of Nov. 2019. Thanks for your contributions :v:__
+> This theme was forked from `avicenna` around 2021; `avicenna`, in turn, hugely benefits from `Ezhil Theme`.
 
-![Screenshot](images/screenshot.png "Avicenna")
+# Demo
 
-# Features
-* Minimal, Responsive, and Clean
-* Single File Configuration
-* Supports Social Links
-* Supports Publication Listing
-* Supports Project Listing
-* Supports Google Analytics
-* Supports Hugo RSS feeds
+I use `zampano` for [my own academic page](https://www.cse.chalmers.se/~lucad/). Feel free to check it out.
 
-# How To Install `Avicenna`?
-> I assume that you know to start with `Hugo`. If you do not know how to run a website with `Hugo`, please read its [quick start](https://gohugo.io/getting-started/quick-start/).
+# Setup
 
-See the full setup in ~70 seconds:
-[![asciicast](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd.svg)](https://asciinema.org/a/7ZReSH0ws7HVbI1c6UUN7wzfd)
+First of all, of course, install [Hugo](https://gohugo.io). Then:
 
-Or simply follow the instructions:
 ```bash
 # creates a static site
-$ hugo new site my-academic-page
 $ cd my-academic-page
-$ cd themes
-$ git clone https://github.com/hadisinaee/avicenna.git
-$ cd ..
-$ cp ./themes/avicenna/exampleSite/config.toml ./
-$ cp Path/To/YourPrile/profile.jpg ./static/profile.jpg
+$ git clone https://github.com/lou1306/zampano.git
+$ cp -r zampano/exampleSite my-academic-page
+$ mkdir my-academic-page/themes
+$ mv zampano my-academic-page/themes
+$ cd my-academic-page
 $ hugo server
 ```
 
 # Sample Configuration
 
-To kick start, copy the following configuration and paste it in `config.toml` file in your root directory.
+Attached below is the `config.toml` that can be found in the `exampleSite` directory.
 
-__IMPORTANT__
- - copy your profile picture and name it `profile.jpg` in the `static` folder
- - copy your CV file in the `static` folder. Set the `cv_name` variable to its full file name.
+Some explanations:
+
+* `picture_name`: put a profile picture under `static/` 
+
 
 ```toml
 baseURL = "https://example.edu"
 languageCode = "en-us"
-title = "Hadi Sinaee"
-theme = "avicenna"
+title = "Johnny Truant"
+theme = "zampano"
 googleAnalytics = "UA-1234-6"
+picture_name = "profile.jpg"
+gravatar = "name@example.com"
 timeout=3000
 
 [params]
   subtitle= "PhD Student"
-  interests="Deep Reinforcement Learning, Machine Learning "
-  cv_name= "HadiSinaee_CV.pdf"
-  blog="http://myblog.edu"
+  interests="Ergodic Literature and Interactive Fiction"
+  cv_name= "cv.pdf"
+  blog="http://example.edu"
 
 [[params.affilation]]
-  name = "Stanford University"
+  name = "Miskatonic University"
   position = "PhD Student"
-  contact = "hadi@cs.stanford.edu"
+  contact = "mail@example.edu"
 
 [[params.affilation]]
   name = "MyCoolStartup"
   position = "Co-Founder"
-  contact = "hadi@mycoolstartup.ai"
+  contact = "mail@example.com"
 
 [[params.social]]
   name = "GitHub"
   icon = "github"
-  url = "https://github.com/hadisinaee"
+  url = "https://github.com/github"
 
 [[params.social]]
   name = "Twitter"
   icon = "twitter"
-  url = "https://twitter.com/hadisinaee"
-
-
-[[params.social]]
-  name = "LinkedIn"
-  icon = "linkedin"
-  url = "https://linkedin.com/in/hadisinaee/"
-
+  url = "https://twitter.com/twitter"
 
 [[params.introduction.paragraph]]
   text="""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -177,9 +161,6 @@ timeout=3000
 
 ```
 
-# Any Idea?
-I am using `Avicenna` for my personal uses. Therefore, I will update it regularly. If you need something that doesn't exist, let's discuss it over an issue :)
-
 # Credits
+* [Avicenna Theme](https://github.com/vividvilla/ezhil)
 * [Ezhil Theme](https://github.com/vividvilla/ezhil)
-* [Feather Icons](https://feathericons.com/)

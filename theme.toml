@@ -1,21 +1,21 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Avicenna"
+name = "zampano"
 license = "MIT"
-licenselink = "https://github.com/hadisinaee/avicenna/blob/master/LICENSE"
+licenselink = "https://github.com/lou1306/zampano/blob/master/LICENSE"
 description = "A minimal, simple, and responsive academic page."
-homepage = "https://github.com/hadisinaee/avicenna"
+homepage = "https://github.com/lou1306/zampano"
 tags = ["academic", "personal", "minimal", "minimalist", "clean", "responsive", "simple", "university"]
 features = ["Academic", "Responsive", "Clean And Minimal", "Social Media Links"]
 min_version = "0.41"
 
 [author]
-  name = "Hadi Sinaee"
-  homepage = "http://ce.sharif.edu/~sinaee/"
+  name = "Luca Di Stefano"
+  homepage = "http://lou1306.github.io"
 
 # If porting an existing theme
 [original]
-  name = "ezhil"
-  homepage = "https://github.com/vividvilla/ezhil"
-  repo = "https://github.com/vividvilla/ezhil"
+  name = "avicenna"
+  homepage = "https://github.com/hadisinaee/avicenna"
+  repo = "https://github.com/hadisinaee/avicenna"
