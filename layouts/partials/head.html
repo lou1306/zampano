@@ -1,5 +1,12 @@
 <div class="header">
-  <img src={{ .Site.Params.picture_name | absURL }} class="profile_image" alt="A photo portrait of {{ .Site.Title }}">
+  {{ with .Site.Params.gravatar }}
+  <img class="profile_image" src="https://www.gravatar.com/avatar/{{ . | md5 }}?s=512&d=identicon" alt="avatar"/>
+  {{ end }}
+  {{ if (not (isset .Site.Params "gravatar")) }}
+  {{ with .Site.Params.picture_name }}
+  <img src={{ . | absURL }} class="profile_image" alt="A photo portrait of {{ .Site.Title }}">
+  {{ end }}
+  {{ end }}
 	<h1 class="site-title">{{ .Site.Title }}</h1>
 	<div class="site-affilation">
 		<div class="affilation">
