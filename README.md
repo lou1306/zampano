@@ -28,7 +28,9 @@ Attached below is the `config.toml` that can be found in the `exampleSite` direc
 
 Some explanations:
 
-* `picture_name`: put a profile picture under `static/` 
+* Put a profile picture under `static/` and set `picture_name` to its filename.
+* Alternatively, set `gravatar` to an email address to source the profile picture from Gravatar. (It will have precedence over `picture_name`)
+* Put a CV under `static/` and aset `params.cv_name` to its filename
 
 
 ```toml
