@@ -2,11 +2,9 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   color: #333;
-  line-height: 1.5;
   font-size: 18px;
   background-color: #fafafa
 }
-
 
 html,
 button,
@@ -30,17 +28,8 @@ hr {
   display: none;
   height: 1px;
   border: 0;
-  /* border-top: 1px solid #ccc; */
   margin: 1rem 0;
   padding: 0;
-}
-
-audio,
-canvas,
-img,
-video {
-  width: 100%;
-  vertical-align: middle;
 }
 
 fieldset {
@@ -71,6 +60,10 @@ span {
     display: block;
 }
 
+/* https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3 */
+:link { color: #0000EE; }
+:visited { color: #551A8B; }
+
 a,
 a:hover {
   text-decoration: none;
@@ -80,50 +73,6 @@ a:hover {
   text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Ubuntu, raleway, sans-serif;
-  line-height: 1.2;
-  color: #330;
-  font-weight: 100;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-h1 {
-  font-size: 2.75rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-h6 {
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-
-.container {
-  max-width: 800px;
-}
-
 ul {
   padding-left: 15px;
 }
@@ -131,12 +80,7 @@ ul {
 ul.flat {
   margin: 0;
   padding: 0;
-}
-
-ul.flat li {
-  display: inline-block;
   list-style: none;
-  margin-left: 0;
 }
 
 .prevent-collapse {
@@ -189,11 +133,7 @@ ul {
 }
 
 .header .profile_image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 30%;
-  height: auto;
+  vertical-align: middle;
   border-radius: 50%;
   /* float: left; */
 }
@@ -202,17 +142,11 @@ ul {
 .header h2 {
   margin: 0;
   padding: 0;
-  font-size: 2rem;
   line-height: 1.3em;
-}
-
-.header h2 {
-  font-size: 1.125rem;
 }
 
 .header nav {
   margin-top: 20px;
-  /* border-top: 1px solid #f4f4f4; */
 }
 
 .header nav ul,
@@ -232,25 +166,13 @@ ul {
   margin-top: 10px;
 }
 
-.header .site-affilation {
-  display: flex;
-  justify-content: space-between;
+.affiliation ul {
+  line-height: 1 !important;
 }
 
 .header .site-affilation .email {
-  /* color: #a00; */
-  font-size: 14px;
-  display: block;
   font-family: "Ubuntu Mono", monospace;
   font-weight: bolder;
-}
-
-.header .site-affilation .position {
-  /* color: #a00; */
-  /* font-size: 14px; */
-  /* display: block; */
-  font-family: Ubuntu, raleway, sans-serif;
-  /* font-weight: bolder; */
 }
 
 .header .site-affilation nav {
@@ -260,7 +182,7 @@ ul {
 }
 
 .header .site-affilation nav ul svg {
-  max-height: 15px;
+  /* max-height: 15px; */
 }
 
 /* header for projects */
@@ -276,16 +198,12 @@ ul {
 
 .page_title {
   font-family: Ubuntu, raleway, sans-serif;
-  font-weight: bolder;
-  font-size: 1.5em;
-  margin-top: 10%;
   display: block;
 }
 
 .page_meta {
   display: block;
   font-family: "Ubuntu Mono", monospace;
-  font-size: 14px;
 }
 
 .page_meta_icon {
@@ -293,8 +211,6 @@ ul {
 }
 
 .email {
-  /* color: #a00; */
-  font-size: 16px;
   font-family: "Ubuntu Mono", monospace;
   font-weight: bolder;
 }
@@ -303,11 +219,6 @@ ul {
   font-size: 15px;
   margin-left: .9em;
   margin-top: .1em;
-}
-
-.year {
-  font-size: 20px;
-  margin-bottom: -.6em;
 }
 
 .project {
@@ -335,12 +246,16 @@ ul {
 }
 
 .section .section-header {
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
   font-weight: 600;
   text-transform: uppercase;
   color: #999;
   margin-bottom: 20px;
   letter-spacing: 1px;
+}
+
+.container > .introduction {
+  margin-bottom: 2rem;
 }
 
 .recent-posts .posts .introduction {
@@ -350,7 +265,7 @@ ul {
 .recent-posts .posts .introduction .meta,
 .introduction .introduction-header .meta,
 .list .posts .introduction .meta {
-  font-size: 0.725rem;
+  /* font-size: 0.725rem; */
   color: #999;
   margin-bottom: 4px;
 }
@@ -375,7 +290,6 @@ ul {
 
 .footer {
   text-align: right;
-  font-size: 0.75em;
   color: #999;
   border-top: 1px solid #f4f4f4;
   padding: 20px 0;
@@ -394,27 +308,31 @@ ul {
   margin-right: 15px;
 }
 
+.profile {
+  max-width: 20% !important;
+}
 
+.propic-div {
+  display: flex;
+  justify-content: center;
+}
 
-@media (max-width: 767px) {
+ul.flat {
+  line-height: 1;
+}
+
+@media (max-width: 750px) {
   body {
     padding: 20px;
   }
 
-  h1 {
-    font-size: 2rem;
+  ul.flat li.sep {
+    display: none;
   }
 
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  h4 {
-    font-size: 1rem;
+  .profile_image {
+    min-width: 110%;
+    margin-top: 3rem;
   }
 
   .container {
@@ -422,8 +340,41 @@ ul {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   body {
     font-size: 14px;
   }
+  .profile_image {
+    max-width: 40% !important;
+    min-width: 40% !important;
+  }
+  .header h2, .header ul {
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+b, strong { font-weight: 500 !important ;}
+
+@media (min-width:750px) {
+  audio,
+  canvas,
+  img,
+  video {
+    width: 100%;
+    vertical-align: middle;
+  }  
+  ul.flat li {
+    display: inline-block;
+    margin-left: 0;
+  }
+
+} 
+

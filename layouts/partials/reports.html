@@ -3,7 +3,7 @@
 	<h4>Preprints and Technical Reports</h4>
 
 	{{- range $index, $reports := $.Site.Params.reports -}}
-	<div class="year">{{ $reports.year }}</div>
+	<h5 class="year">{{ $reports.year }}</h5>
 
 	<ul>
 		{{ range $elem_index, $report := $reports.report }}

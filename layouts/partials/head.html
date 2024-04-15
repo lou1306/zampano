@@ -1,23 +1,33 @@
 <div class="header">
+<div class="row">
   {{ with .Site.Params.gravatar }}
-  <img class="profile_image" src="https://www.gravatar.com/avatar/{{ . | md5 }}?s=512&d=identicon" alt="avatar"/>
+  <div class="two columns propic-div"> 
+  	<img class="profile_image" src="https://www.gravatar.com/avatar/{{ . | md5 }}?s=512&d=identicon" alt="avatar"/>
+  </div>
   {{ end }}
   {{ if (not (isset .Site.Params "gravatar")) }}
   {{ with .Site.Params.picture_name }}
+  <div class="three columns propic-div">
   <img src={{ . | absURL }} class="profile_image" alt="A photo portrait of {{ .Site.Title }}">
+  </div>
   {{ end }}
   {{ end }}
-	<h1 class="site-title">{{ .Site.Title }}</h1>
+  	<div class="ten columns">
+	<h2>{{ .Site.Title }}</h2>
 	<div class="site-affilation">
 		<div class="affilation">
 			{{- range $index, $key := .Site.Params.affilation -}}
 			<ul class="flat">
-				<li class="position">{{$key.position}}, {{$key.name}}</li>
+				<li class="position">{{$key.position}}</li>
+				<li class="sep">&nbsp;•&nbsp;</li>
+				<li class="name">{{$key.name}}</li>
 				<li class="email">{{ $key.contact}}</li>
 			</ul>
 			{{- end -}}
 		</div>
 	</div>
+  </div>
+  </div>
 		<nav class="nav social">
 			<ul class="flat">
 				{{- range $index, $key := sort .Site.Params.Social "icon" -}}

@@ -3,7 +3,7 @@
 	<h4>Publications</h4>
 
 	{{- range $index, $publications := $.Site.Params.publications -}}
-	<div class="year">{{ $publications.year }}</div>
+	<h5 class="year">{{ $publications.year }}</h5>
 
 	<ul>
 		{{ range $elem_index, $publication := $publications.paper }}
