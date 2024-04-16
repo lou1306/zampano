@@ -6,6 +6,8 @@
 	{{- $siteTitle := ( .Site.Title ) -}}
 	{{ if .IsHome -}}
 	<title>{{ $siteTitle }} {{- if isset .Site.Params "subtitle"}} - {{ .Site.Params.Subtitle }}{{- end -}} </title>
+	{{- else if eq .Type "news" -}}
+	<title>News - {{ .Date.Format "January 2, 2006" }} - {{ $siteTitle }} </title>
 	{{- else -}}
 	<title>{{ $title }} - {{ $siteTitle }}</title>
 	{{- end }}
