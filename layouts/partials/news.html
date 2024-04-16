@@ -1,0 +1,11 @@
+<div class="introduction">
+    <h4>News</h4>
+    <ul>
+        {{range (where .Site.RegularPages "Type" "news").ByDate.Reverse }}
+        <li>{{.Date.Format "2006-01-02" }}: {{ .Title | markdownify }}
+            {{ if .Content }}<small><a class="code" href="{{ .RelPermalink }}">[Read more]</a></small>
+            {{end}}
+        </li>
+        {{ end }}
+    </ul>
+</div>
