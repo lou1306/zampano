@@ -17,9 +17,9 @@
 	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ "normalize.css" | absURL }}"/>
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ "skeleton.css" | absURL }}"/>
-	<link rel="stylesheet" type="text/css" media="screen" href="{{ "main.css" | absURL }}"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/normalize.css" | absURL }}"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/skeleton.css" | absURL }}"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ "/main.css" | absURL }}"/>
 
 	{{ range .Site.Params.custom_css -}}
 	<link rel="stylesheet" href="{{ . | absURL }}">
