@@ -235,6 +235,10 @@ ul {
     margin: 0em .9em 0em;
 }
 
+.code {
+  font-family: "Ubuntu Mono", monospace;
+}
+
 .blog_cv {
     font-family: "Ubuntu Mono", monospace;
     font-size: 17px;
