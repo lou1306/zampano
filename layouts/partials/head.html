@@ -30,6 +30,9 @@
   </div>
 		<nav class="nav social">
 			<ul class="flat">
+                                {{ with $.Site.Home.OutputFormats.Get "rss" -}}
+                                <li><a href="{{ .Permalink }}" class="blog_cv">[[rss]]</a></li>
+                                {{ end }}
 				{{- range $index, $key := sort .Site.Params.Social "icon" -}}
                                 <li><a rel="me" href="{{ $key.url }}" title="{{ $key.name }}" class="blog_cv">[{{ $key.icon }}]</a></li>  
 				{{- end -}}
