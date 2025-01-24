@@ -1,9 +1,9 @@
 <div class="introduction">
-    <h4>News
+    <h4>Latest News
         <a href="{{ absURL "news" }}" class="blog_cv">[archive]</a>
     </h4>
     <ul>
-        {{range (where .Site.RegularPages "Type" "news").ByDate.Reverse }}
+        {{range (where .Site.RegularPages "Type" "news").ByDate.Reverse.Limit 5 }}
         {{ .Render "li" }}
         {{ end }}
     </ul>
