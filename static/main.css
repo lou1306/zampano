@@ -11,7 +11,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #111;
 }
 
 ::-moz-selection {
@@ -66,12 +66,11 @@ span {
 
 a,
 a:hover {
-  text-decoration: none;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.1em;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 ul {
   padding-left: 15px;
