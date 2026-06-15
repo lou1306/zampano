@@ -29,4 +29,9 @@
 	<link rel="stylesheet" href="{{ . | absURL }}">
 	{{- end }}
 
+
+        {{- range $index, $key := sort .Site.Params.Social "icon" -}}
+        <link rel="me" href="{{ $key.url }}">
+        {{- end -}}
+
 </head>

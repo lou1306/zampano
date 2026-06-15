@@ -34,7 +34,9 @@
                                 <li><a href="{{ .Permalink }}" class="blog_cv">[[rss]]</a></li>
                                 {{ end }}
 				{{- range $index, $key := sort .Site.Params.Social "icon" -}}
+                                {{- with $key.hide -}}{{- else -}}
                                 <li><a rel="me" href="{{ $key.url }}" title="{{ $key.name }}" class="blog_cv">[{{ $key.icon }}]</a></li>  
+				{{- end -}}
 				{{- end -}}
                         </ul>
 		</nav>
